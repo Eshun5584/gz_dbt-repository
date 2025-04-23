@@ -1,7 +1,7 @@
 -- finance_days.sql
 
  SELECT
-     date_date
+     ORDER BY  date_date DESC date_date
      ,COUNT(orders_id) AS nb_transactions
      ,ROUND(SUM(revenue),0) AS revenue
      ,ROUND(AVG(revenue),1) AS average_basket
@@ -15,4 +15,3 @@
      ,SUM(quantity) AS quantity
  FROM {{ref("int_orders_operational")}}
  GROUP BY  date_date
- ORDER BY  date_date DESC
